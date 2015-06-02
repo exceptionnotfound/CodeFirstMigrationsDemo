@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstMigrationsDemo", "CodeFirstMigrationsDemo\CodeFirstMigrationsDemo.csproj", "{2E87976D-4179-434B-AFDF-3E4B1F52654C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstMigrationsDemo.Fluent", "CodeFirstMigrationsDemo.Fluent\CodeFirstMigrationsDemo.Fluent.csproj", "{66EDF36C-F326-4983-9F9C-BA8400F0B762}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2E87976D-4179-434B-AFDF-3E4B1F52654C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E87976D-4179-434B-AFDF-3E4B1F52654C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E87976D-4179-434B-AFDF-3E4B1F52654C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66EDF36C-F326-4983-9F9C-BA8400F0B762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66EDF36C-F326-4983-9F9C-BA8400F0B762}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66EDF36C-F326-4983-9F9C-BA8400F0B762}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66EDF36C-F326-4983-9F9C-BA8400F0B762}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

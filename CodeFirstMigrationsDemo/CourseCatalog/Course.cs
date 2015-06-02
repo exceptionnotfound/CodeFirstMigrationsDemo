@@ -21,7 +21,12 @@ namespace CodeFirstMigrationsDemo.CourseCatalog
 
         public int TeacherID { get; set; }
 
+        public int BuildingID { get; set; }
+
         [ForeignKey("TeacherID")]
         public virtual Teacher Teacher { get; set; }
+
+        [ForeignKey("BuildingID")]
+        public virtual Building Building { get; set; }
     }
 }

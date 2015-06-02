@@ -11,6 +11,7 @@
     <AssemblyName>CodeFirstMigrationsDemo</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,7 +24,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -61,11 +61,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CourseCatalog\Building.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="CourseCatalog\Course.cs" />
     <Compile Include="CourseCatalog\CourseCatalogContext.cs" />
     <Compile Include="CourseCatalog\Student.cs" />
     <Compile Include="CourseCatalog\StudentAddress.cs" />
     <Compile Include="CourseCatalog\Teacher.cs" />
+    <Compile Include="Migrations\201506021911447_InitialSetup.cs" />
+    <Compile Include="Migrations\201506021911447_InitialSetup.Designer.cs">
+      <DependentUpon>201506021911447_InitialSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506021936409_Buildings.cs" />
+    <Compile Include="Migrations\201506021936409_Buildings.Designer.cs">
+      <DependentUpon>201506021936409_Buildings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -89,7 +101,23 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201506021911447_InitialSetup.resx">
+      <DependentUpon>201506021911447_InitialSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506021936409_Buildings.resx">
+      <DependentUpon>201506021936409_Buildings.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\CourseCatalog.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\CourseCatalog_log.ldf">
+      <DependentUpon>CourseCatalog.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
