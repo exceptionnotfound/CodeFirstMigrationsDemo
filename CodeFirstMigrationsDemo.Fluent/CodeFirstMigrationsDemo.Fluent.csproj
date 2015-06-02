@@ -39,11 +39,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CourseCatalog\Course.cs" />
+    <Compile Include="CourseCatalog\Student.cs" />
+    <Compile Include="CourseCatalog\StudentAddress.cs" />
+    <Compile Include="CourseCatalog\Teacher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CourseCatalog\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
