@@ -6,18 +6,13 @@ using System.Threading.Tasks;
 
 namespace CodeFirstMigrationsDemo.Fluent.CourseCatalog
 {
-    public partial class Student
+    public class Student
     {
         public int ID { get; set; }
-
         public string FirstName { get; set; }
-
         public string LastName { get; set; }
-
         public DateTime DateOfBirth { get; set; }
-
         public virtual StudentAddress Address { get; set; }
-
         public virtual ICollection<Course> Courses { get; set; }
     }
 }
